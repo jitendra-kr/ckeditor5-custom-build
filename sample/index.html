@@ -89,7 +89,6 @@
 						<strong>the culture</strong> of languages varies substantially and the language a person speaks is an essential element of daily life.
 					</p>
 				</div>
-				<div class="sidebar"></div>
 			</div></div>
 		</div>
 	</main>
@@ -119,24 +118,22 @@
 						'indent',
 						'outdent',
 						'|',
+						'imageUpload',
 						'blockQuote',
 						'insertTable',
 						'mediaEmbed',
 						'undo',
-						'redo',
-						'code',
-						'codeBlock',
-						'comment',
-						'fontBackgroundColor',
-						'fontColor',
-						'fontSize',
-						'fontFamily',
-						'highlight',
-						'horizontalLine',
-						'underline'
+						'redo'
 					]
 				},
 				language: 'en',
+				image: {
+					toolbar: [
+						'imageTextAlternative',
+						'imageStyle:full',
+						'imageStyle:side'
+					]
+				},
 				table: {
 					contentToolbar: [
 						'tableColumn',
@@ -145,16 +142,14 @@
 					]
 				},
 				licenseKey: '',
-				sidebar: {
-				container: document.querySelector( '.sidebar' )
-			},
+				
 			} )
 			.then( editor => {
 				window.editor = editor;
 		
-				// Learn more about users on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/users.html.
-				editor.plugins.get( 'Users' ).addUser( { id: '0' } );
-				editor.plugins.get( 'Users' ).defineMe( '0' );
+				
+				
+				
 		
 				
 				
@@ -163,7 +158,7 @@
 			.catch( error => {
 				console.error( 'Oops, something went wrong!' );
 				console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-				console.warn( 'Build id: j0momwjj6168-hw669jo2uemd' );
+				console.warn( 'Build id: 8taujvi3rsrx-8o65j7c6blw0' );
 				console.error( error );
 			} );
 	</script>
