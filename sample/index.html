@@ -103,37 +103,7 @@
 		</p>
 	</footer>
 	<script src="../build/ckeditor.js"></script>
-	<script>
-		const watchdog = new CKSource.Watchdog();
-		
-		window.watchdog = watchdog;
-		
-		watchdog.setCreator( ( element, config ) => {
-			return CKSource.Editor
-				.create( element, config )
-				.then( editor => {
-					// Learn more about users on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/users.html.
-					editor.plugins.get( 'Users' ).addUser( { id: '0' } );
-					editor.plugins.get( 'Users' ).defineMe( '0' );
-		
-					
-					
-					
-		
-					return editor;
-				} )
-		} );
-		
-		watchdog.setDestructor( editor => {
-			
-			
-		
-			return editor.destroy();
-		} );
-		
-		watchdog.on( 'error', handleError );
-		
-		watchdog
+	<script>ClassicEditor
 			.create( document.querySelector( '.editor' ), {
 				
 				toolbar: {
@@ -149,30 +119,29 @@
 						'indent',
 						'outdent',
 						'|',
-						'imageUpload',
 						'blockQuote',
 						'insertTable',
 						'mediaEmbed',
 						'undo',
-						'redo'
+						'redo',
+						'code',
+						'codeBlock',
+						'comment',
+						'fontBackgroundColor',
+						'fontColor',
+						'fontSize',
+						'fontFamily',
+						'highlight',
+						'horizontalLine',
+						'underline'
 					]
 				},
 				language: 'en',
-				image: {
-					toolbar: [
-						'imageTextAlternative',
-						'imageStyle:full',
-						'imageStyle:side',
-						'linkImage'
-					]
-				},
 				table: {
 					contentToolbar: [
 						'tableColumn',
 						'tableRow',
-						'mergeTableCells',
-						'tableCellProperties',
-						'tableProperties'
+						'mergeTableCells'
 					]
 				},
 				licenseKey: '',
@@ -180,14 +149,22 @@
 				container: document.querySelector( '.sidebar' )
 			},
 			} )
-			.catch( handleError );
+			.then( editor => {
+				window.editor = editor;
 		
-		function handleError( error ) {
-			console.error( 'Oops, something went wrong!' );
-			console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-			console.warn( 'Build id: 2b4y2p67p4bs-8o65j7c6blw0' );
-			console.error( error );
-		}
+				// Learn more about users on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/users.html.
+				editor.plugins.get( 'Users' ).addUser( { id: '0' } );
+				editor.plugins.get( 'Users' ).defineMe( '0' );
 		
+				
+				
+				
+			} )
+			.catch( error => {
+				console.error( 'Oops, something went wrong!' );
+				console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+				console.warn( 'Build id: j0momwjj6168-hw669jo2uemd' );
+				console.error( error );
+			} );
 	</script>
 </body>
