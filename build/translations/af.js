@@ -1,1 +1,1 @@
-!function(n){const i=n.af=n.af||{};i.dictionary=Object.assign(i.dictionary||{},{Bold:"Vetgedruk"}),i.getPluralForm=function(n){return 1!=n}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
+!function(e){const n=e.af=e.af||{};n.dictionary=Object.assign(n.dictionary||{},{"Block quote":"Blok-aanhaling",Bold:"Vetgedruk",Cancel:"Kanselleer",Italic:"Skuinsgedruk","Remove color":"",Save:"Berg",Underline:"Onderstreep"}),n.getPluralForm=function(e){return 1!=e}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
