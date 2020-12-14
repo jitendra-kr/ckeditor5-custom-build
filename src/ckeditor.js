@@ -23,6 +23,9 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
+import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 
 class Editor extends ClassicEditor {}
 
@@ -47,7 +50,10 @@ Editor.builtinPlugins = [
 	Paragraph,
 	Table,
 	TableToolbar,
-	Underline
+	Underline,
+	AutoImage,
+	ImageInsert,
+	ImageResize
 ];
 
 export default Editor;
