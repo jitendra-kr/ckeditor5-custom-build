@@ -26,6 +26,7 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed.js';
 
 class Editor extends ClassicEditor {}
 
@@ -53,7 +54,8 @@ Editor.builtinPlugins = [
 	Underline,
 	AutoImage,
 	ImageInsert,
-	ImageResize
+	ImageResize,
+	MediaEmbed
 ];
 
 export default Editor;
